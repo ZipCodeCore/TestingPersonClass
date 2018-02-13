@@ -6,8 +6,12 @@ package com.zipcodewilmington.person;
 public class Person {
     private String name;
     private int age;
+
     private String favoriteColor;
     private String homeState;
+    private int numberOfPets;
+    private int luckyNumber;
+    private String favoriteShow;
 
 
 
@@ -15,8 +19,12 @@ public class Person {
 
         name = "";
         age = Integer.MAX_VALUE;
+
         favoriteColor = "blue";
         homeState = "Delaware";
+        numberOfPets = 12;
+        luckyNumber = 45;
+        favoriteShow = "Game of Thrones";
 
     }
 
@@ -64,6 +72,30 @@ public class Person {
 
     public void setHomeState(String homeState) {
         this.homeState = homeState;
+    }
+
+    public int getNumberOfPets() {
+        return numberOfPets;
+    }
+
+    public void setNumberOfPets(int numberOfPets) {
+        this.numberOfPets = numberOfPets;
+    }
+
+    public int getLuckyNumber() {
+        return luckyNumber;
+    }
+
+    public void setLuckyNumber(int luckyNumber) {
+        this.luckyNumber = luckyNumber;
+    }
+
+    public String getFavoriteShow() {
+        return favoriteShow;
+    }
+
+    public void setFavoriteShow(String favoriteShow) {
+        this.favoriteShow = favoriteShow;
     }
 
 

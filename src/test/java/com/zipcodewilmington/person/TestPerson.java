@@ -92,4 +92,31 @@ public class TestPerson {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void testSetNumberOfPets(){
+        Person person = new Person();
+        Integer expected = 6;
+        person.setNumberOfPets(expected);
+        Integer actual = person.getNumberOfPets();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetLuckyNumber(){
+        Person person = new Person();
+        Integer expected = 11;
+        person.setLuckyNumber(expected);
+        Integer actual = person.getLuckyNumber();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFavoriteShow(){
+        Person person = new Person();
+        String expected = "Game of Thrones";
+        person.setFavoriteShow(expected);
+        String actual = person.getFavoriteShow();
+        Assert.assertEquals(expected, actual);
+    }
+
 }
