@@ -73,4 +73,68 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetJob(){
+        Person person = new Person();
+        boolean expected = true;
+        person.setJob(true);
+        boolean actual = person.getJob();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetSalary(){
+        Person person = new Person();
+        Integer expected = 60000;
+        person.setSalary(expected);
+        Integer actual = person.getSalary();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHairColor(){
+        Person person = new Person();
+        String expected = "Black";
+        person.setHairColor(expected);
+        String actual = person.getHairColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testHasPet(){
+        Person person = new Person();
+        boolean expected = false;
+        person.setHasPet(false);
+        boolean actual = person.getHasPet();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testFavoriteColor(){
+        Person person = new Person();
+        String expected = "Red";
+        person.setFavoriteColor(expected);
+        String actual = person.getFavoriteColor();
+        Assert.assertEquals(expected, actual);
+    }
+//    @Test
+//    public void testConstructorWithSalaryAndHair(){
+//        String expectedHair = "Black";
+//        Integer expectedSalary = 60000;
+//
+//        Person person = new Person(expectedHair, expectedSalary);
+//
+//
+//        String actualHair = person.getHairColor();
+//        Integer actualSalary = person.getSalary();
+//
+//
+//        Assert.assertEquals(expectedSalary, actualSalary);
+//        Assert.assertEquals(expectedHair, actualHair);
+
+// Can't figure out why this constructor doesn't work.
+
+    // }
+
 }

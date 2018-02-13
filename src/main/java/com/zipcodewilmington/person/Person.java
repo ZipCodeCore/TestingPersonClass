@@ -6,6 +6,11 @@ package com.zipcodewilmington.person;
 public class Person {
     private String name;
     private int age;
+    private boolean hasJob;
+    private int salary;
+    private String hairColor;
+    private boolean hasPet;
+    private String favoriteColor;
 
     public Person() {
         name = "";
@@ -40,5 +45,44 @@ public class Person {
 
     public Integer getAge() {
         return this.age;
+    }
+
+    public void setJob (boolean hasJob){
+        this.hasJob = hasJob;
+    }
+
+    public boolean getJob(){
+        return this.hasJob;
+    }
+
+    public void setSalary (int salary){
+        this.salary = salary;
+    }
+    public Integer getSalary(){
+        return this.salary;
+    }
+
+    public void setHairColor(String hairColor) {
+        this.hairColor = hairColor;
+    }
+
+    public String getHairColor() {
+        return this.hairColor;
+    }
+
+    public boolean getHasPet() {
+        return hasPet;
+    }
+
+    public void setHasPet(boolean hasPet) {
+        this.hasPet = hasPet;
+    }
+
+    public String getFavoriteColor() {
+        return favoriteColor;
+    }
+
+    public void setFavoriteColor(String favoriteColor) {
+        this.favoriteColor = favoriteColor;
     }
 }
