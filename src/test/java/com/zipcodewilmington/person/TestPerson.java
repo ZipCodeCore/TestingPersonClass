@@ -10,8 +10,8 @@ public class TestPerson {
     @Test
     public void testDefaultConstructor() {
         // Given
-        String expectedName = "";
-        Integer expectedAge = Integer.MAX_VALUE;
+        String expectedName = null;
+        Integer expectedAge = 0;
 
         // When
         Person person = new Person();
@@ -93,6 +93,72 @@ public class TestPerson {
 
         // Then
         Integer actual = person.getAge();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHeight() {
+        // Given
+        Person person = new Person();
+        Integer expected = 60;
+
+        // When
+        person.setHeight(expected);
+
+        // Then
+        Integer actual = person.getHeight();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testSetWeight() {
+        // Given
+        Person person = new Person();
+        Integer expected = 120;
+
+        // When
+        person.setWeight(expected);
+
+        // Then
+        Integer actual = person.getWeight();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testSetHaircolor() {
+        // Given
+        Person person = new Person();
+        String expected = "Brown";
+
+        // When
+        person.setHaircolor(expected);
+        String actual = person.getHaircolor();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testSetEyecolor() {
+        // Given
+        Person person = new Person();
+        String expected = "Green";
+
+        // When
+        person.setEyecolor(expected);
+        String actual = person.getEyecolor();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testSetGender() {
+        // Given
+        Person person = new Person();
+        String expected = "Programmer";
+
+        // When
+        person.setGender(expected);
+        String actual = person.getGender();
+
+        // Then
         Assert.assertEquals(expected, actual);
     }
 }
