@@ -33,6 +33,7 @@ public class TestPerson {
         Person person = new Person(expected);
 
         // Then
+        //Integer actual = person.getAge();
         String actual = person.getName();
         Assert.assertEquals(expected, actual);
     }
@@ -93,6 +94,51 @@ public class TestPerson {
 
         // Then
         Integer actual = person.getAge();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFavoriteFood() {
+        Person person = new Person();
+        String expected = "Pizza";
+        person.setFavoriteFood(expected);
+        String actual = person.getFavoriteFood();
+        Assert.assertEquals(expected, actual);
+     }
+
+    @Test
+    public void testSetBestAlbum() {
+        Person person = new Person();
+        String expected = "Midnight Marauders";
+        person.setBestAlbum(expected);
+        String actual = person.getBestAlbum();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testLuckyNumber() {
+        Person person = new Person();
+        Integer expected = 8;
+        person.setLuckyNumber(expected);
+        Integer actual = person.getLuckyNumber();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testNightsOfSleep() {
+        Person person = new Person();
+        String expected = "none";
+        person.setNightsOfSleep(expected);
+        String actual = person.getNightsOfSleep();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCoffeePerDay() {
+        Person person = new Person();
+        Integer expected = 3;
+        person.setCoffeePerDay(expected);
+        Integer actual = person.getCoffeePerDay();
         Assert.assertEquals(expected, actual);
     }
 }
