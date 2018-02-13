@@ -85,4 +85,9 @@ public class Person {
     public void setFavoriteColor(String favoriteColor) {
         this.favoriteColor = favoriteColor;
     }
+
+//    public Person(int salary, String hairColor){
+//        this.hairColor = hairColor;
+//        this.salary = salary;
+//    }
 }

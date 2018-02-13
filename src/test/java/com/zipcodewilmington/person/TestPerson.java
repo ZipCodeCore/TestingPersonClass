@@ -132,9 +132,8 @@ public class TestPerson {
 //
 //        Assert.assertEquals(expectedSalary, actualSalary);
 //        Assert.assertEquals(expectedHair, actualHair);
-
-// Can't figure out why this constructor doesn't work.
-
-    // }
+//
+//
+//     }
 
 }
