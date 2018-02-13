@@ -95,4 +95,53 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testConstructorWithNameAndAgeAndBirthDay() {
+        // Given
+        Integer expectedAge = 5;
+        String expectedName = "Leon";
+        String expectedBirthDay = "1/1/1970";
+
+        // When
+        Person person = new Person(expectedName, expectedAge, expectedBirthDay);
+
+        // Then
+        Integer actualAge = person.getAge();
+        String actualName = person.getName();
+        String actualBirthDay = person.getBirthDay();
+
+        Assert.assertEquals(expectedAge, actualAge);
+        Assert.assertEquals(expectedName, actualName);
+    }
+
+    @Test
+    public void testSetBirthDay() {
+        // Given
+        Person person = new Person();
+        String expected = "1/1/1066";
+
+        // When
+        person.setBirthDay(expected);
+
+        // Then
+        String actual = person.getBirthDay();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFavoriteAnimal() {
+        // Given
+        Person person = new Person();
+        String expected = "Kitty Cat";
+
+        // When
+        person.setFavoriteAnimal(expected);
+
+        // Then
+        String actual = person.getFavoriteAnimal();
+        Assert.assertEquals(expected, actual);
+    }
+
+
 }
