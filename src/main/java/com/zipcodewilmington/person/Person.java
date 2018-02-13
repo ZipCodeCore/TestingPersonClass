@@ -8,9 +8,13 @@ public class Person {
     private int age;
 
     public Person() {
+        this.name = name;
+        this.age = age;
     }
 
     public Person(int age) {
+
+
     }
 
     public Person(String name) {
@@ -26,10 +30,12 @@ public class Person {
     }
 
     public String getName() {
-        return null;
+
+        return name;
     }
 
     public Integer getAge() {
-        return null;
+
+        return age;
     }
 }
