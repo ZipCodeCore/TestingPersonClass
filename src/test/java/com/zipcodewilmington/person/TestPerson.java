@@ -131,4 +131,35 @@ public class TestPerson {
         String actual = person.getPhoneNumber();
         Assert.assertEquals(expected, actual);
     }
+
+    //SIXTH
+    @Test
+    public void testSetCity() {
+        // Given
+        Person person = new Person();
+        String expected = "mycity";
+
+        // When
+        person.setCity(expected);
+
+        // Then
+        String actual = person.getCity();
+        Assert.assertEquals(expected, actual);
+    }
+
+    //EIGHTH
+    @Test
+    public void testSetZipcode() {
+        // Given
+        Person person = new Person();
+        Integer expected = 12345;
+
+        // When
+        person.setZipcode(expected);
+
+        // Then
+        Integer actual = person.getZipcode();
+        Assert.assertEquals(expected, actual);
+    }
+
 }

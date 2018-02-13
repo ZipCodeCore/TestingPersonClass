@@ -10,8 +10,8 @@ public class Person {
     //Five new fields:
     private String middlename;
     private String lastname;
-    private String fullName;
     private String phoneNumber;
+    private String city;
     private int zipcode;
 
     public Person() {
@@ -47,6 +47,16 @@ public class Person {
         this.age = age;
     }
 
+    //SIXTH
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    //EIGHTH
+    public void setZipcode(int zipcode) {
+        this.zipcode = zipcode;
+    }
+
     //FOURTH
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
@@ -73,6 +83,16 @@ public class Person {
     //FIFTH
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    //SEVENTH
+    public String getCity() {
+        return this.city;
+    }
+
+    //NINTH
+    public int getZipcode() {
+        return this.zipcode;
     }
 
 }
