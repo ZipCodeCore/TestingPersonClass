@@ -8,13 +8,10 @@ public class Person {
     private int age;
     private String favoriteColor;
     private int timesBeenToMars;
-    private boolean hasArms;
+    private boolean reptilian;
 
     private static final int fDEFAULT_AGE = Integer.MAX_VALUE;
     private static final String fDEFAULT_NAME = "";
-    private static final String fDEFAULT_FAVCOLOR = "";
-    private static final int fDEFAULT_TIMES_BEEN_TO_MARS = 0;
-    private static final boolean fDEFAULT_HAS_ARMS = true;
 
     public Person() {
        this(fDEFAULT_NAME, fDEFAULT_AGE);
@@ -65,11 +62,11 @@ public class Person {
         this.timesBeenToMars = timesBeenToMars;
     }
 
-    public boolean isHasArms() {
-        return hasArms;
+    public boolean isReptilian() {
+        return reptilian;
     }
 
-    public void setHasArms(boolean hasArms) {
-        this.hasArms = hasArms;
+    public void setHasArms(boolean reptilian) {
+        this.reptilian = reptilian;
     }
 }
