@@ -10,8 +10,8 @@ public class TestPerson {
     @Test
     public void testDefaultConstructor() {
         // Given
-        String expectedName = "";
-        Integer expectedAge = Integer.MAX_VALUE;
+        String expectedName = "no name";
+        Integer expectedAge = 0;
 
         // When
         Person person = new Person();
@@ -93,6 +93,33 @@ public class TestPerson {
 
         // Then
         Integer actual = person.getAge();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetNationality(){
+        Person person = new Person();
+        String expected = "American";
+        person.setNationality(expected);
+        String actual = person.getNationality();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetJob(){
+        Person person = new Person();
+        String expected = "Programmer";
+        person.setJob(expected);
+        String actual = person.getJob();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetWearsGlasses(){
+        Person person = new Person();
+        boolean expected = false;
+        person.setWearsGlasses(expected);
+        boolean actual = person.isWearsGlasses();
         Assert.assertEquals(expected, actual);
     }
 }
