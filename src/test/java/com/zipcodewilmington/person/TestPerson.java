@@ -9,10 +9,11 @@ import org.junit.Test;
 public class TestPerson {
     @Test
     public void testDefaultConstructor() {
-        String expectedName = "";
-        Integer expectedAge = Integer.MAX_VALUE;
-
         Person person = new Person();
+
+        String expectedName = null;
+        Integer expectedAge = 0;
+
 
         String actualName = person.getName();
         Integer actualAge = person.getAge();
@@ -34,7 +35,7 @@ public class TestPerson {
         Integer expected = 5;
         Person person = new Person(expected);
         person.setAge(expected);
-        String actual = person.getName();
+        Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
 
@@ -73,4 +74,49 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+    @Test
+    public void testSetHeight() {
+        Person person = new Person();
+        Integer expected = 62;
+        person.setHeight(expected);
+        Integer actual = person.getHeight();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetShoeSize() {
+        Person person = new Person();
+        Integer expected = 6;
+        person.setShoeSize(expected);
+        Integer actual = person.getShoeSize();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testHairColor() {
+        Person person = new Person();
+        String expected = "brown";
+        person.setHairColor(expected);
+        String actual = person.getHairColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetEyeColor() {
+        Person person = new Person();
+        String expected = "blue";
+        person.setEyeColor(expected);
+        String actual = person.getEyeColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetDateOfBirth() {
+        Person person = new Person();
+        String expected = "July 7, 1990";
+        person.setDateOfBirth(expected);
+        String actual = person.getDateOfBirth();
+        Assert.assertEquals(expected, actual);
+    }
+
 }
