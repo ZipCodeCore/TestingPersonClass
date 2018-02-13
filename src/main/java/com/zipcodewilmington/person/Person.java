@@ -7,29 +7,72 @@ public class Person {
     private String name;
     private int age;
 
+    //Five new fields:
+    private String middlename;
+    private String lastname;
+    private String fullName;
+    private String phoneNumber;
+    private int zipcode;
+
     public Person() {
+        this.name = "";
+        this.age = Integer.MAX_VALUE;
     }
 
     public Person(int age) {
+        this.age = age;
     }
 
     public Person(String name) {
+        this.name = name;
     }
 
     public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    //FIRST, new constructor
+    public Person(String name, String middleName, String lastName) {
+        this.name = name;
+        this.middlename = middleName;
+        this.lastname = lastName;
     }
 
     public void setName(String name) {
+        this.name = name;
     }
 
     public void setAge(int age) {
+        this.age = age;
+    }
+
+    //FOURTH
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getName() {
-        return null;
+        return this.name;
+    }
+
+    //SECOND
+    public String getMiddlename() {
+        return this.middlename;
+    }
+
+    //THIRD
+    public String getLastname() {
+        return this.lastname;
     }
 
     public Integer getAge() {
-        return null;
+        return this.age;
     }
+
+    //FIFTH
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
 }
