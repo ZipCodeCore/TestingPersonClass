@@ -73,7 +73,7 @@ public class TestPerson {
         //String socialSecurityNumber,String phoneNumber,String nationality,Integer height,String maritalStatus
         String expectedSocialSecurityNumber = "2003336545";
         String expectedPhoneNumber = "2021112222";
-        String expectedNationality = "Eritrea";
+        String expectedNationality = "American";
         Double expectedHeight = 6.0;
         String expectedMaritalStatus = "Single";
 
@@ -155,7 +155,7 @@ public class TestPerson {
         String expected = "American";
 
         // When
-        person.setSocialSecurity(expected);
+        person.setNationality(expected);
 
         // Then
         String actual = person.getNationality();
