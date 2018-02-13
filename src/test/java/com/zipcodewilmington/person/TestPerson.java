@@ -9,11 +9,14 @@ import org.junit.Test;
 public class TestPerson {
     @Test
     public void testDefaultConstructor() {
+        // Given
         String expectedName = "";
         Integer expectedAge = Integer.MAX_VALUE;
 
+        // When
         Person person = new Person();
 
+        // Then
         String actualName = person.getName();
         Integer actualAge = person.getAge();
 
@@ -22,33 +25,44 @@ public class TestPerson {
     }
 
     @Test
-    public void testConstructorWithName(){
+    public void testConstructorWithName() {
+        // Given
         String expected = "Leon";
+
+        // When
         Person person = new Person(expected);
+
+        // Then
         String actual = person.getName();
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void testConstructorWithAge(){
+    public void testConstructorWithAge() {
+        // Given
         Integer expected = 5;
-
+        
+        //When
         Person person = new Person(expected);
 
         person.setAge(expected);
 
+        // Then
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
 
 
     @Test
-    public void testConstructorWithNameAndAge(){
+    public void testConstructorWithNameAndAge() {
+        // Given
         Integer expectedAge = 5;
         String expectedName = "Leon";
 
+        // When
         Person person = new Person(expectedName, expectedAge);
 
+        // Then
         Integer actualAge = person.getAge();
         String actualName = person.getName();
 
@@ -58,18 +72,28 @@ public class TestPerson {
 
     @Test
     public void testSetName() {
+        // Given
         Person person = new Person();
         String expected = "Leon";
+
+        // When
         person.setName(expected);
         String actual = person.getName();
+
+        // Then
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testSetAge() {
+        // Given
         Person person = new Person();
         Integer expected = 5;
+
+        // When
         person.setAge(expected);
+
+        // Then
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
