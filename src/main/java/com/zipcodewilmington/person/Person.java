@@ -6,10 +6,14 @@ package com.zipcodewilmington.person;
 public class Person {
     private String name;
     private int age;
+    private String favoriteColor;
+    private String favoriteAnimal;
 
     public Person() {
         name = "";
         age = Integer.MAX_VALUE;
+        favoriteColor = "";
+        favoriteAnimal = "";
     }
 
     public Person(int age) {
@@ -39,5 +43,25 @@ public class Person {
 
     public Integer getAge() {
         return this.age;
+    }
+
+    public void setFavoriteColor(String color) {
+        this.favoriteColor = color;
+    }
+
+    public String getFavoriteColor() {
+        return favoriteColor;
+    }
+
+    public void setFavoriteColorToGreen() {
+        this.favoriteColor = "Green";
+    }
+
+    public void setFavoriteAnimal(String animal) {
+        this.favoriteAnimal = animal;
+    }
+
+    public String getFavoriteAnimal() {
+        return favoriteAnimal;
     }
 }

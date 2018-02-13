@@ -73,4 +73,31 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetFavoriteColorToGreen() {
+        Person person = new Person();
+        String expected = "Green";
+        person.setFavoriteColorToGreen();
+        String actual = person.getFavoriteColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFavoriteColor() {
+        Person person = new Person();
+        String expected = "Red";
+        person.setFavoriteColor("Red");
+        String actual = person.getFavoriteColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFavoriteAnimal() {
+        Person person = new Person();
+        String expected = "Lion";
+        person.setFavoriteAnimal("Lion");
+        String actual = person.getFavoriteAnimal();
+        Assert.assertEquals(expected, actual);
+    }
 }
