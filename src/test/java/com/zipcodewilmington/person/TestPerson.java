@@ -9,8 +9,8 @@ import org.junit.Test;
 public class TestPerson {
     @Test
     public void testDefaultConstructor() {
-        String expectedName = "";
-        Integer expectedAge = Integer.MAX_VALUE;
+        String expectedName = null;
+        Integer expectedAge = 0;
 
         Person person = new Person();
 
@@ -22,7 +22,7 @@ public class TestPerson {
     }
 
     @Test
-    public void testConstructorWithName(){
+    public void testConstructorWithName() {
         String expected = "Leon";
         Person person = new Person(expected);
         String actual = person.getName();
@@ -30,20 +30,17 @@ public class TestPerson {
     }
 
     @Test
-    public void testConstructorWithAge(){
+    public void testConstructorWithAge() {
         Integer expected = 5;
         Person person = new Person(expected);
         person.setAge(expected);
-        String actual = person.getName();
+        Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
 
 
-
-
-
     @Test
-    public void testConstructorWithNameAndAge(){
+    public void testConstructorWithNameAndAge() {
         Integer expectedAge = 5;
         String expectedName = "Leon";
 
@@ -73,4 +70,50 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetHairColor() {
+        Person person = new Person();
+        String expected = "Brown";
+        person.setHairColor(expected);
+        String actual = person.getHairColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetEyeColor() {
+        Person person = new Person();
+        String expected = "Blue";
+        person.setEyeColor(expected);
+        String actual = person.getEyeColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFingers() {
+        Person person = new Person();
+        Integer expected = 6;
+        person.setFingers(expected);
+        Integer actual = person.getFingers();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHeight() {
+        Person person = new Person();
+        Double expected = 6.5;
+        person.setHeight(expected);
+        Double actual = person.getHeight();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetSalary() {
+        Person person = new Person();
+        Integer expected = 50000;
+        person.setSalary(expected);
+        Integer actual = person.getSalary();
+        Assert.assertEquals(expected, actual);
+    }
+
 }
