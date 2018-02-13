@@ -34,7 +34,7 @@ public class TestPerson {
         Integer expected = 5;
         Person person = new Person(expected);
         person.setAge(expected);
-        String actual = person.getName();
+        Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
 
