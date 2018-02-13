@@ -32,14 +32,14 @@ public class TestPerson {
     @Test
     public void testConstructorWithAge(){
         Integer expected = 5;
+
         Person person = new Person(expected);
+
         person.setAge(expected);
-        String actual = person.getName();
+
+        Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
-
-
-
 
 
     @Test
@@ -73,4 +73,23 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetFavoriteColor(){
+        Person person = new Person();
+        String expected = "Blue";
+        person.setFavoriteColor(expected);
+        String actual = person.getFavoriteColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHomeState(){
+        Person person = new Person();
+        String expected = "Ohio";
+        person.setHomeState(expected);
+        String actual = person.getHomeState();
+        Assert.assertEquals(expected, actual);
+    }
+
 }
