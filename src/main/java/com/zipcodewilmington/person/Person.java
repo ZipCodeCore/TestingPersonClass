@@ -30,6 +30,10 @@ public class Person {
         this.name = name;
         this.age = age;
     }
+    public Person(Integer salary, String hairColor){
+        this.hairColor = hairColor;
+        this.salary = salary;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -86,8 +90,4 @@ public class Person {
         this.favoriteColor = favoriteColor;
     }
 
-//    public Person(int salary, String hairColor){
-//        this.hairColor = hairColor;
-//        this.salary = salary;
-//    }
 }

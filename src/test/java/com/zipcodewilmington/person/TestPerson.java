@@ -118,22 +118,22 @@ public class TestPerson {
         String actual = person.getFavoriteColor();
         Assert.assertEquals(expected, actual);
     }
-//    @Test
-//    public void testConstructorWithSalaryAndHair(){
-//        String expectedHair = "Black";
-//        Integer expectedSalary = 60000;
-//
-//        Person person = new Person(expectedHair, expectedSalary);
-//
-//
-//        String actualHair = person.getHairColor();
-//        Integer actualSalary = person.getSalary();
-//
-//
-//        Assert.assertEquals(expectedSalary, actualSalary);
-//        Assert.assertEquals(expectedHair, actualHair);
-//
-//
-//     }
+    @Test
+    public void testConstructorWithSalaryAndHair(){
+        String expectedHair = "Black";
+        Integer expectedSalary = 60000;
+
+        Person person = new Person(expectedSalary, expectedHair);
+
+
+        String actualHair = person.getHairColor();
+        Integer actualSalary = person.getSalary();
+
+
+        Assert.assertEquals(expectedSalary, actualSalary);
+        Assert.assertEquals(expectedHair, actualHair);
+
+
+     }
 
 }
