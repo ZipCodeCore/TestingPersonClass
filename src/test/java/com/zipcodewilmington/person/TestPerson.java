@@ -124,7 +124,6 @@ public class TestPerson {
     }
 
 
-
     @Test
     public void testConstructorWithShirtSize() {
         // Given
@@ -165,14 +164,73 @@ public class TestPerson {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void testSetEyecolor() {
+        // Given
+        Person person = new Person();
+        String expected = "Blue";
 
+        // When
+        person.setEyeColor(expected);
+        String actual = person.getEyeColor();
 
+        // Then
+        Assert.assertEquals(expected, actual);
+        }
 
+    @Test
+    public void testSetHeight() {
+        // Given
+        Person person = new Person();
+        String expected = "tall";
 
+        // When
+        person.setHeight(expected);
+        String actual = person.getHeight();
 
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 
+    @Test
+    public void testSetGender() {
+        // Given
+        Person person = new Person();
+        String expected = "male";
 
+        // When
+        person.setGender(expected);
+        String actual = person.getGender();
 
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 
+    @Test
+    public void testSetShirtSize() {
+        // Given
+        Person person = new Person();
+        String expected = "Medium";
 
+        // When
+        person.setShirtSize(expected);
+        String actual = person.getShirtSize();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testHairColor() {
+        // Given
+        Person person = new Person();
+        String expected = "brown";
+
+        // When
+        person.setHaircolor(expected);
+        String actual = person.getHaircolor();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 }
