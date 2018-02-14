@@ -37,14 +37,13 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
 
-
     }
 
-    public String getName(String name) {
+    public String getName() {
         return name;
     }
 
-    public Integer getAge(int age) {
+    public Integer getAge() {
         return age;
     }
 
