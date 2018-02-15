@@ -22,7 +22,7 @@ public class TestPerson {
     }
 
     @Test
-    public void testConstructorWithName(){
+    public void testConstructorWithName() {
         String expected = "Leon";
         Person person = new Person(expected);
         String actual = person.getName();
@@ -30,20 +30,17 @@ public class TestPerson {
     }
 
     @Test
-    public void testConstructorWithAge(){
-        Integer expected = 5;
+    public void testConstructorWithAge() {
+        int expected = 5;
         Person person = new Person(expected);
         person.setAge(expected);
-        String actual = person.getName();
+        int actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
 
 
-
-
-
     @Test
-    public void testConstructorWithNameAndAge(){
+    public void testConstructorWithNameAndAge() {
         Integer expectedAge = 5;
         String expectedName = "Leon";
 
@@ -68,9 +65,47 @@ public class TestPerson {
     @Test
     public void testSetAge() {
         Person person = new Person();
-        Integer expected = 5;
-        person.setAge(expected);
-        Integer actual = person.getAge();
+        person.setAge(5);
+        int actual = person.getAge();
+        Assert.assertEquals(5 , actual);
+    }
+
+    @Test
+    public void testSetMarriedStatus() {
+        Person person = new Person();
+        person.setMarriedStatus(true);
+        Boolean actual = person.getMarriedStatus();
+        Assert.assertEquals(true, actual);
+    }
+
+    @Test
+    public void testSetHasChildren() {
+        Person person = new Person();
+        person.setHasChildren(false);
+        Boolean actual = person.getHasChildren();
+        Assert.assertEquals(false, actual);
+    }
+
+    public void testSetIsEmployed() {
+        Person person = new Person();
+        person.setIsEmployed(true);
+        Boolean actual = person.getIsEmployed();
+        Assert.assertEquals(true, actual);
+    }
+
+    public void testSetSocialSecurityNum() {
+        Person person = new Person();
+        int expected = 1234567899;
+        person.setSocialSecurityNum(expected);
+        int actual = person.getSocialSecurityNum();
         Assert.assertEquals(expected, actual);
     }
+
+    public void testSetDriversLicense() {
+        Person person = new Person();
+        int expected = 1234567899;
+        person.setdriversLicense(expected);
+        int actual = person.getSocialSecurityNum();
+        Assert.assertEquals(expected, actual);}
+
 }
