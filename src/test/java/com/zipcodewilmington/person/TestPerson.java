@@ -100,4 +100,49 @@ public class TestPerson {
         String actual = person.getFavoriteAnimal();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testGetFavoriteAnimal() {
+        Person person = new Person();
+        String expected = "Tiger";
+        person.setFavoriteAnimal("Tiger");
+        String actual = person.getFavoriteAnimal();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFavoriteGame() {
+        Person person = new Person();
+        String expected = "Call of War Battle Game";
+        person.setFavoriteGame("Call of War Battle Game");
+        String actual = person.getFavoriteAnimal();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetFavoriteGame() {
+        Person person = new Person();
+        String expected = "Shoot Bang Gun Shooter";
+        person.setFavoriteGame("Shoot Bang Gun Shooter");
+        String actual = person.getFavoriteAnimal();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHeight() {
+        Person person = new Person();
+        double expected = 6.1;
+        person.setHeight(6.1);
+        double actual = person.getHeight();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetHeight() {
+        Person person = new Person();
+        double expected = 6.2;
+        person.setHeight(6.2);
+        double actual = person.getHeight();
+        Assert.assertEquals(expected, actual);
+    }
 }

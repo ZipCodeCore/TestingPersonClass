@@ -8,12 +8,15 @@ public class Person {
     private int age;
     private String favoriteColor;
     private String favoriteAnimal;
+    private String favoriteGame;
+    private double height;
 
     public Person() {
         name = "";
         age = Integer.MAX_VALUE;
         favoriteColor = "";
         favoriteAnimal = "";
+        favoriteGame = "";
     }
 
     public Person(int age) {
@@ -64,4 +67,21 @@ public class Person {
     public String getFavoriteAnimal() {
         return favoriteAnimal;
     }
+
+    public void setFavoriteGame(String game) {
+        this.favoriteGame = game;
+    }
+
+    public String getFavoriteGame() {
+        return favoriteGame;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
 }
