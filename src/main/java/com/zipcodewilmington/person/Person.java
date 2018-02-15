@@ -3,8 +3,11 @@ package com.zipcodewilmington.person;
 /**
  * Created by leon on 2/12/18.
  */
-/**Add 5 different fields to Person Class
-  each method has appropriate testing in test person */
+
+/**
+ * Add 5 different fields to Person Class
+ * each method has appropriate testing in test person
+ */
 public class Person {
     //fields are mostly kept private accessed through getter and setter. Encapsulated
     private String name;
@@ -15,15 +18,20 @@ public class Person {
     private int socialSecurityNum;
     private int driversLicense;
 
-    /**constructor is a method which is called when an object of the class is instantiated
-     It is used to set default values to the attributes of the class.
-    The name of the constructor is the same as the class name and no return type. they can be overridden.*/
+    /**
+     * constructor is a method which is called when an object of the class is instantiated
+     * It is used to set default values to the attributes of the class.
+     * The name of the constructor is the same as the class name and no return type. they can be overridden.
+     */
     public Person() {
         this.name = "";
         this.age = Integer.MAX_VALUE;
     }
-    /**this refers to current class instance variable.
-     resolves problem of ambiguity between instance variables and params*/
+
+    /**
+     * this refers to current class instance variable.
+     * resolves problem of ambiguity between instance variables and params
+     */
     public Person(int age) {
         this.age = age;
     }
@@ -38,6 +46,7 @@ public class Person {
         this.age = age;
 
     }
+
     //Overload Constructor
     public Person(Boolean marriedStatus, Boolean hasChildren, Boolean isEmployed, int socialSecurityNum, int driversLicense) {
         this.marriedStatus = marriedStatus;
@@ -47,7 +56,8 @@ public class Person {
         this.driversLicense = driversLicense;
     }
 
-    /**a setter is a method that updates value of a variable.
+    /**
+     * a setter is a method that updates value of a variable.
      * naming convention set or get + variableName
      */
     public void setName(String name) {
@@ -78,9 +88,11 @@ public class Person {
         this.driversLicense = driversLicense;
     }
 
-    /**Getter is a method returning the value of a
-     private variable the return type is same as the data
-    type of the variable it is returning*/
+    /**
+     * Getter is a method returning the value of a
+     * private variable the return type is same as the data
+     * type of the variable it is returning
+     */
     public String getName() {
         return this.name;
     }

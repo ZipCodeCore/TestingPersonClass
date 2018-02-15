@@ -67,7 +67,7 @@ public class TestPerson {
         Person person = new Person();
         person.setAge(5);
         int actual = person.getAge();
-        Assert.assertEquals(5 , actual);
+        Assert.assertEquals(5, actual);
     }
 
     @Test
@@ -106,6 +106,7 @@ public class TestPerson {
         int expected = 1234567899;
         person.setdriversLicense(expected);
         int actual = person.getSocialSecurityNum();
-        Assert.assertEquals(expected, actual);}
+        Assert.assertEquals(expected, actual);
+    }
 
 }
