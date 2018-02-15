@@ -7,6 +7,8 @@ import org.junit.Test;
  * Created by leon on 2/12/18.
  */
 public class TestPerson {
+
+
     @Test
     public void testDefaultConstructor() {
         // Given
@@ -28,6 +30,7 @@ public class TestPerson {
     public void testConstructorWithName() {
         // Given
         String expected = "Leon";
+
 
         // When
         Person person = new Person(expected);
@@ -69,9 +72,46 @@ public class TestPerson {
     }
 
     @Test
+    public void hasGivenUpOnLifeTest() {
+        // Given
+        boolean expected = true;
+
+        // When
+        Person person = new Person(true);
+
+        // Then
+        boolean actual = person.isHasGivenUpOnLife();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void ConstructorWithWeightEyeColorHairColorFavoriteColorTest() {
+        // Given
+        Integer expectedWeight = 5;
+        String expectedEyeColor = "Brown";
+        String expectedHairColor = "Brown";
+        String expectedFavoriteColor = "purple";
+
+        // When
+        Person person = new Person(expectedWeight, expectedEyeColor, expectedHairColor, expectedFavoriteColor);
+
+        // Then
+        Integer actualWeight = person.getWeight();
+        String actualEyeColor = person.getEyeColor();
+        String actualHairColor = person.getHairColor();
+        String actualFavoriteColor = person.getFavoriteColor();
+
+        Assert.assertEquals(expectedWeight, actualWeight);
+        Assert.assertEquals(expectedEyeColor, actualEyeColor);
+        Assert.assertEquals(expectedHairColor, actualHairColor);
+        Assert.assertEquals(expectedFavoriteColor, actualFavoriteColor);
+    }
+
+
+
+    @Test
     public void testSetName() {
         // Given
-        Person person = new Person();
+        Person person = new Person(true);
         String expected = "Leon";
 
         // When
@@ -85,7 +125,7 @@ public class TestPerson {
     @Test
     public void testSetAge() {
         // Given
-        Person person = new Person();
+        Person person = new Person(true);
         Integer expected = 5;
 
         // When
