@@ -1,7 +1,7 @@
 package com.zipcodewilmington.person;
 
 /**
- * Created by leon on 2/12/18.
+ *
  */
 public class Person {
     private String name;
@@ -12,6 +12,9 @@ public class Person {
     private Double height;
     private String maritalStatus;
 
+    /**
+     *
+     */
     public Person() {
         this.name = "";
         this.age = Integer.MAX_VALUE;
