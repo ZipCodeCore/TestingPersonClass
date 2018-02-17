@@ -1,17 +1,19 @@
 package com.zipcodewilmington.person;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
  * Created by leon on 2/12/18.
  */
 public class TestPerson {
+
     @Test
     public void testDefaultConstructor() {
         // Given
-        String expectedName = "";
-        Integer expectedAge = Integer.MAX_VALUE;
+        String expectedName = null;
+        Integer expectedAge = 0;
 
         // When
         Person person = new Person();
@@ -95,4 +97,50 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetGender(){
+        //Given
+        Person person = new Person();
+        char expected = 'm';
+
+        //When
+        person.setGender(expected);
+
+        //Then
+        char actual = person.getGender();
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testSetOccupation(){
+        //Given
+        Person person = new Person();
+        String expected = "Teacher";
+
+        //When
+        person.setOccupation(expected);
+
+        //Then
+        String actual = person.getOccupation();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFavoriteColor()
+    {
+        //Given
+        Person person = new Person();
+        String expected = "Pink";
+
+        //When
+        person.setFavoriteColor(expected);
+
+        //Then
+        String actual = person.getFavoriteColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+
 }

@@ -6,30 +6,46 @@ package com.zipcodewilmington.person;
 public class Person {
     private String name;
     private int age;
+    private char gender;
+    private String occupation;
+    private String favoriteColor;
 
-    public Person() {
+    //Constructors
+    public Person() {}
+
+    public Person(int age) {this.age = age;}
+
+    public Person(String name) {this.name = name;}
+
+    public Person(String name, int age)
+    {
+        this.name = name;
+        this.age = age;
     }
 
-    public Person(int age) {
-    }
+    //Setters
 
-    public Person(String name) {
-    }
+    public void setName(String name) {this.name = name;}
 
-    public Person(String name, int age) {
-    }
+    public void setAge(int age) {this.age = age;}
 
-    public void setName(String name) {
-    }
+    public void setGender(char gender) {this.gender = gender;}
 
-    public void setAge(int age) {
-    }
+    public void setOccupation(String occupation){this.occupation = occupation;}
 
-    public String getName() {
-        return null;
-    }
+    public void setFavoriteColor(String favoriteColor){this.favoriteColor = favoriteColor;}
 
-    public Integer getAge() {
-        return null;
-    }
+
+
+    //Getters
+
+    public String getName() {return name;}
+
+    public Integer getAge() {return age;}
+
+    public char getGender() {return gender;}
+
+    public String getOccupation() {return occupation;}
+
+    public String getFavoriteColor() {return favoriteColor;}
 }
