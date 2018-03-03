@@ -22,7 +22,7 @@ public class TestPerson {
     }
 
     @Test
-    public void testConstructorWithName(){
+    public void testConstructorWithName() {
         String expected = "Leon";
         Person person = new Person(expected);
         String actual = person.getName();
@@ -30,7 +30,7 @@ public class TestPerson {
     }
 
     @Test
-    public void testConstructorWithAge(){
+    public void testConstructorWithAge() {
         Integer expected = 5;
         Person person = new Person(expected);
         person.setAge(expected);
@@ -39,11 +39,8 @@ public class TestPerson {
     }
 
 
-
-
-
     @Test
-    public void testConstructorWithNameAndAge(){
+    public void testConstructorWithNameAndAge() {
         Integer expectedAge = 5;
         String expectedName = "Leon";
 
@@ -72,5 +69,37 @@ public class TestPerson {
         person.setAge(expected);
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testseteyeColor() {
+        String expectedeyeColor = "Blue";
+        Person person = new Person(expectedeyeColor);
+        String actualeyeColor = person.getEyeColor();
+        Assert.assertEquals(expectedeyeColor, actualeyeColor);
+    }
+
+    @Test
+    public void testsethairColor() {
+        String expectedhairColor = "red";
+        Person person = new Person(expectedhairColor);
+        String actualhairColor = person.getHairColor();
+        Assert.assertEquals(expectedhairColor, actualhairColor);
+    }
+
+    @Test
+    public void testsethomeTown() {
+        String expectedhomeTown = "woolridge";
+        Person person = new Person(expectedhomeTown);
+        String actualhomeTown = person.gethomeTown();
+        Assert.assertEquals(expectedhomeTown, actualhomeTown);
+
+    }
+    @Test
+    public void testsetgender(){
+        String expectedgender = "male";
+        Person person = new Person(expectedgender);
+        String actualgender = person.getGender();
+        Assert.assertEquals(expectedgender, actualgender);
     }
 }
