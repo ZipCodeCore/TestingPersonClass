@@ -4,8 +4,8 @@ package com.zipcodewilmington.person;
  * Created by leon on 2/12/18.
  */
 public class Person {
-    private String name = "Leon";
-    private int age = 5;
+    private String name;
+    private int age;
 
     public Person() {
     this.name = "";
