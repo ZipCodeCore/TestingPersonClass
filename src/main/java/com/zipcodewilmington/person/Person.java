@@ -23,7 +23,7 @@ public class Person {
 
     public Person(){
         name = "";
-        age = 25;
+        age = Integer.MAX_VALUE;
         height = 51;
         city = "Baltimore";
         state = "Maryland";
@@ -35,6 +35,7 @@ public class Person {
     }
 
     public Person(String name) {
+        this.name = name;
     }
 
     public Person(boolean student,int height) {
@@ -48,16 +49,19 @@ public class Person {
     }
 
     public Person(String name, int age) {
+        setName(name);
+        setAge(age);
     }
 
     public void setName(String name) {
+        this.name = name;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age) { this.age = age;
     }
     public Integer getAge() {
         return age;

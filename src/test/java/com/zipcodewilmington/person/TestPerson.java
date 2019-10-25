@@ -19,6 +19,13 @@ public class TestPerson {
         // Then
         String actualName = person.getName();
         Integer actualAge = person.getAge();
+        Integer actualHeight = person.getHeight();
+        String actualCity = person.getName();
+        String actualState = person.getName();
+        boolean actualStudent = person.isStudent();
+
+
+
 
         Assert.assertEquals(expectedName, actualName);
         Assert.assertEquals(expectedAge, actualAge);
@@ -68,31 +75,4 @@ public class TestPerson {
         Assert.assertEquals(expectedName, actualName);
     }
 
-    @Test
-    public void testSetName() {
-        // Given
-        Person person = new Person();
-        String expected = "Leon";
-
-        // When
-        person.setName(expected);
-        String actual = person.getName();
-
-        // Then
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testSetAge() {
-        // Given
-        Person person = new Person();
-        Integer expected = 5;
-
-        // When
-        person.setAge(expected);
-
-        // Then
-        Integer actual = person.getAge();
-        Assert.assertEquals(expected, actual);
-    }
 }
