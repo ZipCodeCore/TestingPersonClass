@@ -7,29 +7,52 @@ public class Person {
     private String name;
     private int age;
 
-    public Person() {
+    public Person()
+    {
+        setAge(Integer.MAX_VALUE);
+        setName("");
     }
 
-    public Person(int age) {
+    public Person(int age)
+    {
+        setAge(age);
     }
 
-    public Person(String name) {
+    public Person(String name)
+    {
+        setName(name);
     }
 
-    public Person(String name, int age) {
+
+    public Person(String name, int age)
+    {
+        setName(name);
+        setAge(age);
     }
 
-    public void setName(String name) {
+    //setter method for name variable
+    public void setName(String name)
+    {
+        //private variable name in Person class
+        this.name = name;
     }
 
-    public void setAge(int age) {
+    //setter method for age variable
+    public void setAge(int age)
+    {
+        //private variable age in Person class
+        this.age = age;
     }
 
-    public String getName() {
-        return null;
+    //getter method for name variable
+    public String getName()
+    {
+        return name;
     }
 
-    public Integer getAge() {
-        return null;
+    //getter method for age variable
+    public Integer getAge()
+    {
+        return age;
     }
 }
