@@ -95,4 +95,146 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+    @Test
+    public void getHeight() {
+        // Given
+        Person person = new Person();
+        Double expected = 6.2;
+
+        // When
+        person.setHeight(expected);
+
+        // Then
+         Double actual = person.getHeight();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setHeight() {
+        // Given
+        Person person = new Person();
+        Double expected = 6.2;
+
+        // When
+        person.setHeight(expected);
+
+        // Then
+        Double actual = person.getHeight();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getEyeColor() {
+        // Given
+        Person person = new Person();
+        String expected = "green";
+
+        // When
+        person.setEyeColor(expected);
+
+        // Then
+        String actual = person.getEyeColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setEyeColor() {
+        // Given
+        Person person = new Person();
+        String expected = "green";
+
+        // When
+        person.setEyeColor(expected);
+
+        // Then
+        String actual = person.getEyeColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getHairColor() {
+        // Given
+        Person person = new Person();
+        String expected = "Black";
+
+        // When
+        person.setHairColor(expected);
+
+        // Then
+        String actual = person.getHairColor();
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void setHairColor() {
+        // Given
+        Person person = new Person();
+        String expected = "Black";
+
+        // When
+        person.setHairColor(expected);
+
+        // Then
+        String actual = person.getHairColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getAmountOfToes() {
+        // Given
+        Person person = new Person();
+        Integer expected = 10;
+
+        // When
+        person.setAmountOfToes(expected);
+
+        // Then
+        Integer actual = person.getAmountOfToes();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setAmountOfToes() {
+        // Given
+        Person person = new Person();
+        Integer expected = 10;
+
+        // When
+        person.setAmountOfToes(expected);
+
+        // Then
+        Integer actual = person.getAmountOfToes();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getFavoriteDayofTheWeek() {
+        // Given
+        Person person = new Person();
+        String expected = "Friday";
+
+        // When
+        person.setFavoriteDayofTheWeek(expected);
+
+        // Then
+        String actual = person.getFavoriteDayofTheWeek();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setFavoriteDayofTheWeek() {
+        // Given
+        Person person = new Person();
+        String expected = "Friday";
+
+        // When
+        person.setFavoriteDayofTheWeek(expected);
+
+        // Then
+        String actual = person.getFavoriteDayofTheWeek();
+        Assert.assertEquals(expected, actual);
+    }
+
 }
+
