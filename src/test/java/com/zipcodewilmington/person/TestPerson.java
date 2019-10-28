@@ -69,6 +69,39 @@ public class TestPerson {
     }
 
     @Test
+    public void testConstructorWithNameAgeEyeColorNumberOfCarsOccupationNumberOfPetsWeightInLB() {
+        Integer expectedAge = 10;
+        String expectedName = "Bob";
+        String expectedEyeColor = "blue";
+        Integer expectedNumberOfCars = 3;
+        String expectedOccupation = "CEO";
+        Integer expectedNumberOfPets = 0;
+        Integer expectedWeightInLB = 165;
+
+
+        // When
+        Person person = new Person(expectedName, expectedAge, expectedEyeColor, expectedNumberOfCars, expectedOccupation, expectedNumberOfPets, expectedWeightInLB);
+
+        // Then
+        Integer actualAge = person.getAge();
+        String actualName = person.getName();
+        String actualEyeColor = person.getEyeColor();
+        Integer actualNumberOfCars = person.getNumberOfCars();
+        String actualOccupation = person.getOccupation();
+        Integer actualNumberOfPets = person.getNumberOfPets();
+        Integer actualWeightInLB = person.getWeightInLB();
+
+        Assert.assertEquals(expectedAge, actualAge);
+        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(expectedEyeColor, actualEyeColor);
+        Assert.assertEquals(expectedNumberOfCars, actualNumberOfCars);
+        Assert.assertEquals(expectedOccupation, actualOccupation);
+        Assert.assertEquals(expectedNumberOfPets, actualNumberOfPets);
+        Assert.assertEquals(expectedWeightInLB, actualWeightInLB);
+
+    }
+
+    @Test
     public void testSetName() {
         // Given
         Person person = new Person();
@@ -95,4 +128,62 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetEyeColor() {
+        Person person = new Person();
+        String expected = "brown";
+
+        person.setEyeColor(expected);
+
+        String actual = person.getEyeColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testNumberOfCars() {
+        Person person = new Person();
+        Integer expected = 2;
+
+        person.setNumberOfCars(expected);
+
+        Integer actual = person.getNumberOfCars();
+        Assert.assertEquals(expected, actual);
+    }
+
+
+    @Test
+    public void testSetOccupation() {
+        Person person = new Person();
+        String expected = "Software Developer";
+
+        person.setOccupation(expected);
+
+        String actual = person.getOccupation();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testNumberOfPets() {
+        Person person = new Person();
+        Integer expected = 2;
+
+        person.setNumberOfPets(expected);
+
+        Integer actual = person.getNumberOfPets();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetWeightInLB() {
+        Person person = new Person();
+        Integer expected = 150;
+
+        person.setWeightInLB(expected);
+
+        Integer actual = person.getWeightInLB();
+        Assert.assertEquals(expected, actual);
+    }
+
+
 }
