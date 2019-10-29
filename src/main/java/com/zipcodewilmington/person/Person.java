@@ -4,22 +4,17 @@ package com.zipcodewilmington.person;
  * Created by leon on 2/12/18.
  */
 public class Person {
-    private String name;
-    private Integer age;
-    private String eyeColor;
-    private Integer numberOfCars;
-    private String occupation;
-    private Integer numberOfPets;
-    private Integer weightInLB;
+    private String name, eyeColor, occupation;
+    private Integer age, numberOfCars, numberOfPets, weightInLB;
 
     public Person(String expectedName, Integer expectedAge, String expectedEyeColor, Integer expectedNumberOfCars, String expectedOccupation, Integer expectedNumberOfPets, Integer expectedWeightInLB) {
-        this.name = "";
-        this.age = Integer.MAX_VALUE;
-        this.eyeColor = "";
-        this.numberOfCars = Integer.MAX_VALUE;
-        this.occupation = "";
-        this.numberOfPets = Integer.MAX_VALUE;
-        this.weightInLB = Integer.MAX_VALUE;
+        this.name = expectedName;
+        this.age = expectedAge;
+        this.eyeColor = expectedEyeColor;
+        this.numberOfCars = expectedNumberOfCars;
+        this.occupation = expectedOccupation;
+        this.numberOfPets = expectedNumberOfPets;
+        this.weightInLB = expectedWeightInLB;
     }
 
     public Person(String name, Integer age) {
@@ -27,11 +22,18 @@ public class Person {
         this.age = age;
     }
 
-    public Person() { }
+    public Person() {
+        this.name = "";
+        this.age = Integer.MAX_VALUE;
+    }
 
-    public Person(Integer expected) { }
+    public Person(Integer expected) {
+        this.age = expected;
+    }
 
-    public Person(String expected) { }
+    public Person(String expected) {
+        this.name = expected;
+    }
 
     public void setName(String name) { this.name = name; }
 
