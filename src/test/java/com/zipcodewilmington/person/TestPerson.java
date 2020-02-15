@@ -95,4 +95,18 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetOccupation() {
+        // Given
+        Person person = new Person();
+        String expected = "doctor";
+
+        // When
+        person.setoccupation(expected);
+
+        // Then
+        String actual = person.getoccupation();
+        Assert.assertEquals(expected, actual);
+    }
 }

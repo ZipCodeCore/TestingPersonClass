@@ -6,38 +6,81 @@ package com.zipcodewilmington.person;
 public class Person {
     private String name;
     private int age;
+    private String birthCountry;
+    private int numberOfSpokenLangs;
+    private String occupation;
+    private String currentCity;
+    private int weight;
 
     public Person() {
         this.name = "";
         this.age = Integer.MAX_VALUE;
+        this.birthCountry = "";
+        this.numberOfSpokenLangs = 0;
+        this.occupation = "";
+        this.currentCity = "";
+        this.weight = 0;
     }
 
-    public Person(int age) {
-        this.age = age;
+    public Person(int chosenAge) {
+        this.age = chosenAge;
     }
 
-    public Person(String name) {
-        this.name = name;
+    public Person(String chosenName) {
+        this.name = chosenName;
     }
 
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Person(String chosenName, int chosenAge) {
+        this.name = chosenName;
+        this.age = chosenAge;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String chosenName) {
+        this.name = chosenName;
+    }
+    public void setAge(int chosenAge) {
+        this.age = chosenAge;
+    }
+    public void setbirthCountry(String birthCountry) {
+        this.birthCountry = birthCountry;
+    }
+    public void setnumberOfSpokenLangs(int numberOfSpokenLangs) {
+        this.numberOfSpokenLangs = numberOfSpokenLangs;
+    }
+    public void setoccupation(String occupation) {
+        this.occupation = occupation;
+    }
+    public void setcurrentCity(String currentCity) {
+        this.currentCity = currentCity;
+    }
+    public void setweight(int weight) {
+        this.weight = weight;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+
+
 
     public String getName() {
         return name;
     }
-
     public Integer getAge() {
         return age;
     }
+    public String getbirthCountry() {
+        return birthCountry;
+    }
+    public int getnumberOfSpokenLangs() {
+        return numberOfSpokenLangs;
+    }
+    public String getoccupation() {
+        return occupation;
+    }
+    public String getcurrentCity() {
+        return currentCity;
+    }
+    public int getweight() {
+        return weight;
+    }
+
 }
+
