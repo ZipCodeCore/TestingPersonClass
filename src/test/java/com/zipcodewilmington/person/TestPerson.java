@@ -12,6 +12,11 @@ public class TestPerson {
         // Given
         String expectedName = "";
         Integer expectedAge = Integer.MAX_VALUE;
+        //Integer expectedBirthYear = Integer.MAX_VALUE;
+        //Integer expectedNumberOfSiblings = Integer.MAX_VALUE;
+        //
+        //
+        //
 
         // When
         Person person = new Person();
