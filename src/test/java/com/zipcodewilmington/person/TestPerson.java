@@ -14,7 +14,7 @@ public class TestPerson {
         Integer expectedAge = Integer.MAX_VALUE;
 
         // When
-        Person person = new Person();
+        Person person = new Person(expectedName, expectedAge);
 
         // Then
         String actualName = person.getName();
@@ -71,10 +71,11 @@ public class TestPerson {
     @Test
     public void testSetName() {
         // Given
-        Person person = new Person();
+        //Person person = new Person();
         String expected = "Leon";
 
         // When
+        Person person = new Person(expected);
         person.setName(expected);
         String actual = person.getName();
 
@@ -85,10 +86,11 @@ public class TestPerson {
     @Test
     public void testSetAge() {
         // Given
-        Person person = new Person();
+        //Person person = new Person();
         Integer expected = 5;
 
         // When
+        Person person = new Person(expected);
         person.setAge(expected);
 
         // Then
