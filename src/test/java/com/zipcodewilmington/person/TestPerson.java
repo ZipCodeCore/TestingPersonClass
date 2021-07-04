@@ -95,4 +95,49 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testGetHeight() {
+        //Given
+        Integer expectedAge =25;
+        String expectedName = "Dione";
+        Integer expectedHeight = 68;
+
+        //When
+        Person person = new Person(expectedName, expectedAge, expectedHeight);
+
+        //Then
+        Integer actual = person.getHeight();
+        Assert.assertEquals(expectedHeight, actual);
+    }
+
+    @Test
+    public void testSetHeight() {
+        //Given
+        Person person = new Person();
+        Integer expected = 70;
+
+        //When
+        person.setHeight(expected);
+
+        //Then
+        Integer actual = person.getHeight();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetGPA() {
+        //Given
+        Integer expectedAge =25;
+        String expectedName = "Dione";
+        Integer expectedHeight = 68;
+        Double expectedGPA = 3.8;
+
+        //When
+        Person testperson = new Person(expectedName,expectedAge,expectedHeight, expectedGPA);
+
+        //Then
+        Double actual = testperson.getGPA();
+        Assert.assertEquals(expectedGPA, actual);
+    }
 }
