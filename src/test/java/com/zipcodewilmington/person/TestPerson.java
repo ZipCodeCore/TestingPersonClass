@@ -95,4 +95,78 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
-}
+
+    @Test
+    public void testSetHairType() {
+        //Given
+        Person person = new Person();
+        String expected = "curly";
+
+        //When
+        person.setHairType(expected);
+
+        //Then
+        String actual = person.getHairType();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetEyeColor() {
+        //Given
+        Person person = new Person();
+        String expected = "brown";
+
+        //When
+        person.setEyeColor(expected);
+
+        //Then
+        String actual = person.getEyeColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testHasGlasses() {
+        //Given
+        Person person = new Person();
+        Boolean expected = true;
+
+        //When
+        person.setGlasses(true);
+
+        //Then
+        Boolean actual = person.isGlasses();
+        Assert.assertEquals(true, actual);
+    }
+
+    @Test
+    public void testAmountOfTeeth() {
+        //Given
+        Person person = new Person();
+        Integer expected = 32;
+
+        //When
+        person.setAmountOfTeeth(expected);
+
+        //Then
+        Integer actual = person.getAmountOfTeeth();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testWingSpan() {
+        //Given
+        Person person = new Person();
+        Integer expected = 65;
+
+        //When
+        person.setWingSpan(expected);
+
+        //Then
+        Integer actual = person.getWingSpan();
+        Assert.assertEquals(expected, actual);
+    }
+
+
+
+
+} // final brace
