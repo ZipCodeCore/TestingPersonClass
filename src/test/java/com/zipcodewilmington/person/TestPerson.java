@@ -81,6 +81,7 @@ public class TestPerson {
 
         // Then
         Assert.assertEquals(expected, actual);
+        System.out.println(actual);
     }
 
     @Test
@@ -97,4 +98,77 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+
+    @Test
+    public void testHairColorTest() {
+        //GIVEN
+        String expected = "blue";
+
+        //WHEN
+        Person person = new Person(expected);
+        person.setHairColor(expected);
+        String actual = person.getHairColor();
+
+        //THEN
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setHaitTest(){
+        //GIVEN
+        int expected = 4;
+
+        //WHEN
+        Person person = new Person(expected);
+        person.setHait(expected);
+        int actual = person.getHait();
+
+        //THEN
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setNationalityTest(){
+        //GIVEN
+        String expected = "Mexico";
+
+        //WHEN
+        Person person = new Person(expected);
+        person.setNationality(expected);
+        String actual = person.getNationality();
+
+        //THEN
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setFavoriteColorTest(){
+        //GIVEN
+        String expected = "pink";
+        //WHEN
+        Person person = new Person(expected);
+        person.setFavoriteColor(expected);
+        String actual = person.getFavoriteColor();
+        //THEN
+        Assert.assertEquals(expected, actual);
+
+    }
+
+
+
+    @Test
+    public void SetFavoriteSong(){
+        //GIVEN
+        String expected = "Dynamite";
+        //WHEN
+        Person person = new Person(expected);
+        person.setFavoriteSong(expected);
+        String actual = person.getFavoriteSong();
+        //THEN
+        Assert.assertEquals(expected, actual);
+    }
+
+
+
 }
