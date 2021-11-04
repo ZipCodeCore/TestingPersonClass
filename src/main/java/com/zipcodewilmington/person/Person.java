@@ -8,15 +8,20 @@ public class Person {
     private int age;
 
     public Person() {
+        this("",Integer.MAX_VALUE); //will call the 2 parameter constructor
     }
 
     public Person(int age) {
     }
 
     public Person(String name) {
+        //this(name) // will call the Person(String name)
+
     }
 
     public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     public void setName(String name) {
@@ -26,10 +31,10 @@ public class Person {
     }
 
     public String getName() {
-        return null;
+        return this.name;
     }
 
     public Integer getAge() {
-        return null;
+        return this.age;
     }
 }
