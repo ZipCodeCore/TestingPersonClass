@@ -12,11 +12,12 @@ public class Person {
     }
 
     public Person(int age) {
+        this("",age);
     }
 
     public Person(String name) {
         //this(name) // will call the Person(String name)
-
+        this(name,Integer.MAX_VALUE);
     }
 
     public Person(String name, int age) {
