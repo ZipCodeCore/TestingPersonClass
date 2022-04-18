@@ -12,41 +12,48 @@ public class TestPerson {
         // Given
         String expectedName = "";
         Integer expectedAge = Integer.MAX_VALUE;
+        String expectedHairColor = "pink";
+        String expectedBirthMonth = "March";
 
         // When
         Person person = new Person();
 
         // Then
-        String actualName = person.getName();
-        Integer actualAge = person.getAge();
+        String actualName = person.getName("");
+        Integer actualAge = person.getAge(Integer.MAX_VALUE);
+        String actualHairColor = "pink";
+        String actualBirthMonth = "March";
+
 
         Assert.assertEquals(expectedName, actualName);
         Assert.assertEquals(expectedAge, actualAge);
+        Assert.assertEquals(expectedHairColor, actualHairColor);
+        Assert.assertEquals(expectedBirthMonth, actualBirthMonth);
     }
 
     @Test
     public void testConstructorWithName() {
         // Given
+        Person person = new Person();
         String expected = "Leon";
 
         // When
-        Person person = new Person(expected);
+        String actual = person.getName("Leon");
 
         // Then
-        String actual = person.getName();
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testConstructorWithAge() {
         // Given
+        Person person = new Person();
         Integer expected = 5;
 
         // When
-        Person person = new Person(expected);
+        Integer actual = person.getAge(5);
 
         // Then
-        Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
 
@@ -61,8 +68,8 @@ public class TestPerson {
         Person person = new Person(expectedName, expectedAge);
 
         // Then
-        Integer actualAge = person.getAge();
-        String actualName = person.getName();
+        Integer actualAge = person.getAge(5);
+        String actualName = person.getName("Leon");
 
         Assert.assertEquals(expectedAge, actualAge);
         Assert.assertEquals(expectedName, actualName);
@@ -76,7 +83,7 @@ public class TestPerson {
 
         // When
         person.setName(expected);
-        String actual = person.getName();
+        String actual = person.getName("Leon");
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -86,13 +93,80 @@ public class TestPerson {
     public void testSetAge() {
         // Given
         Person person = new Person();
-        Integer expected = 5;
+        Integer expectedAge = 5;
 
         // When
-        person.setAge(expected);
+        person.setAge(expectedAge);
+        Integer actual = person.getAge(5);
 
         // Then
-        Integer actual = person.getAge();
+        Assert.assertEquals(expectedAge, actual);
+    }
+    @Test
+    public void testHairColor() {
+        // Given
+        Person person = new Person();
+        String expected = "pink";
+
+        // When
+        String actual = person.getHairColor("pink");
+
+        // Then
         Assert.assertEquals(expected, actual);
     }
+    @Test
+    public void testBirthMonth() {
+        // Given
+        Person person = new Person();
+        String expected = "March";
+
+        // When
+        person.setBirthMonth(expected);
+        String actual = person.getBirthMonth();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testTalent(){
+        // Given
+        Person person = new Person();
+        String expected = "Can Dance";
+
+        // When
+        person.setTalent("Can Dance");
+        String actual = person.getTalent();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testGender(){
+        // Given
+        Person person = new Person();
+        char expected = 'F';
+
+        // When
+        person.setGender('F');
+        char actual = person.getGender();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testNationality(){
+        // Given
+        Person person = new Person();
+        String expected = "American";
+
+        // When
+        person.setNationality("American");
+        String actual = person.getNationality();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+
+
 }
