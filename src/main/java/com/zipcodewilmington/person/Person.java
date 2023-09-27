@@ -1,7 +1,7 @@
 package com.zipcodewilmington.person;
 
 /**
- * Created by leon on 2/12/18.
+ * If you did ObjectsOne lab, you might recognize this code?
  */
 public class Person {
     private String name;
