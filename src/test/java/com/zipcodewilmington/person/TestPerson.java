@@ -95,4 +95,74 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetBirthMonth() {
+        // Given
+        Person person = new Person();
+        Integer expected = 7;
+
+        // When
+        person.setBirthMonth(expected);
+
+        // Then
+        Integer actual = person.getBirthMonth();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetBirthYear() {
+        // Given
+        Person person = new Person();
+        Integer expected = 1998;
+
+        // When
+        person.setBirthYear(expected);
+
+        // Then
+        Integer actual = person.getBirthYear();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetMiddleInitial() {
+        // Given
+        Person person = new Person();
+        char expected = 'M';
+
+        // When
+        person.setMiddleInitial(expected);
+
+        // Then
+        char actual = person.getMiddleInitial();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFavoriteColor() {
+        // Given
+        Person person = new Person();
+        String expected = "orange";
+
+        // When
+        person.setFavoriteColor(expected);
+
+        // Then
+        String actual = person.getFavoriteColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHasAPet() {
+        // Given
+        Person person = new Person();
+        boolean expected = false;
+
+        // When
+        person.setHasAPet(expected);
+
+        // Then
+        boolean actual = person.getHasAPet();
+        Assert.assertEquals(expected, actual);
+    }
 }
